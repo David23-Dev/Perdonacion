@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Resultado de tu elección:</h1>
+  <p>Elección: <span id="choice"></span></p>
+  <p>Hora de la elección: <span id="time"></span></p>
+  <p>Dispositivo: <span id="device"></span></p>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const choice = urlParams.get('choice');
+    const time = urlParams.get('time');
+    const device = urlParams.get('device');
+    document.getElementById('choice').innerText = choice.toUpperCase();
+    document.getElementById('time').innerText = time;
+    document.getElementById('device').innerText = device;
+  </script>
+</body>
+</html>
